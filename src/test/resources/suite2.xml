@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+
+<suite name="ParametrizedXMLTest" parallel="tests" thread-count="2">
+    <listeners>
+        <listener class-name="com.epam.testng.JIRATestNGListener"/>
+    </listeners>
+
+    <test name="parameter test">
+        <parameter name="number1" value="1"/>
+        <parameter name="number2" value="2"/>
+        <parameter name="sum" value="3"/>
+        <classes>
+            <class name="ParametrizedXMLTest"/>
+        </classes>
+    </test>
+</suite>
